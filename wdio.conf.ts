@@ -22,7 +22,7 @@ export const config: WebdriverIO.Config = {
   // The path of the spec files will be resolved relative from the directory of
   // of the config file unless it's absolute.
   //
-  specs: ["./test/specs/**/locators.ts"],
+  specs: ["./test/specs/**/*.spec.ts"],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -51,8 +51,15 @@ export const config: WebdriverIO.Config = {
   //
   capabilities: [
     {
+      // "wdio:maxInstances": 2,
       browserName: "chrome",
+      acceptInsecureCerts: true
     },
+    // {
+    //   "wdio:maxInstances": 2,
+    //   browserName: "edge",
+    //   acceptInsecureCerts: true
+    // },
   ],
 
   //
@@ -97,6 +104,9 @@ export const config: WebdriverIO.Config = {
   //
   // Default request retries count
   connectionRetryCount: 3,
+
+  // services: ["selenium-standalone"],
+
   //
   // Test runner services
   // Services take over a specific job you don't want to take care of. They enhance
@@ -125,7 +135,14 @@ export const config: WebdriverIO.Config = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter
-  reporters: ["spec"],
+  // reporters: ["spec"],
+  reporters: [['allure', {
+    outputDir: 'allure-results',
+    disableWebdriverStepsReporting: true,
+    disableWebdriverScreenshotsReporting: true,
+  }]],
+    // ...
+
 
   // Options to be passed to Mocha.
   // See the full list at http://mochajs.org/

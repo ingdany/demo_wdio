@@ -7,3 +7,7 @@
 ### Execute Project
 
 `npx wdio run wdio.conf.ts`
+
+### Generate Report
+
+`allure generate ./allure-results && allure open`

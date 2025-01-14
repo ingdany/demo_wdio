@@ -1,5 +1,5 @@
 
-describe("Locators Test Scenarios", () => {
+describe.skip("Locators Test Scenarios", () => {
     it("Should login with valid credentials", async () => {
         await browser.url("https://demoqa.com/links");
     });
