@@ -1,7 +1,7 @@
 import loginPage from '../pageobjects/bookStore/loginPage'
 
 
-describe.skip('Login Module Test Suite', () => {
+describe('Login Module Test Suite', () => {
     beforeEach(async () => {
         loginPage.open()
     })

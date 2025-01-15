@@ -11,6 +11,7 @@
     "@wdio/mocha-framework": "^9.5.0",
     "@wdio/selenium-standalone-service": "^8.14.0",
     "@wdio/spec-reporter": "^9.5.0",
-    "@wdio/visual-service": "^6.3.0"
+    "@wdio/visual-service": "^6.3.0",
+    "wdio-docker-service": "^3.2.1"
   }
 }

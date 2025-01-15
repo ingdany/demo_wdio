@@ -22,7 +22,10 @@ export const config: WebdriverIO.Config = {
   // The path of the spec files will be resolved relative from the directory of
   // of the config file unless it's absolute.
   //
-  specs: ["./test/specs/**/*.spec.ts"],
+  // hostname: "localhost",
+  // port: 4444,
+  // path: "/",
+  specs: ["./test/specs/**/mock.spec.ts","./test/specs/**/spy.spec.ts"],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -51,13 +54,18 @@ export const config: WebdriverIO.Config = {
   //
   capabilities: [
     {
-      // "wdio:maxInstances": 2,
+      "wdio:maxInstances": 1,
       browserName: "chrome",
       acceptInsecureCerts: true
     },
     // {
     //   "wdio:maxInstances": 2,
     //   browserName: "edge",
+    //   acceptInsecureCerts: true
+    // },
+    // {
+    //   "wdio:maxInstances": 2,
+    //   browserName: "firefox",
     //   acceptInsecureCerts: true
     // },
   ],
@@ -69,7 +77,8 @@ export const config: WebdriverIO.Config = {
   // Define all options that are relevant for the WebdriverIO instance here
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: "info",
+  // logLevel: "info",
+  logLevel: "silent",
   //
   // Set specific log levels per logger
   // loggers:
@@ -105,15 +114,15 @@ export const config: WebdriverIO.Config = {
   // Default request retries count
   connectionRetryCount: 3,
 
-  // services: ["selenium-standalone"],
+  
 
   //
   // Test runner services
   // Services take over a specific job you don't want to take care of. They enhance
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
-  // services: [],
-  //
+  // services: ["selenium-standalone"],
+  // services: ['docker'],
   // Framework you want to run your specs with.
   // The following are supported: Mocha, Jasmine, and Cucumber
   // see also: https://webdriver.io/docs/frameworks

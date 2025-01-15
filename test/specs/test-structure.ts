@@ -1,4 +1,4 @@
-describe.skip("Mocha JS Demo", () => {
+describe("Mocha JS Demo", () => {
   before(async () => {
     console.log("Before Hook ***4");
   });

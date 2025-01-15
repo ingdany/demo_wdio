@@ -1,4 +1,4 @@
-describe.skip('Browser & Windows Scenarios', ()=>{
+describe('Browser & Windows Scenarios', ()=>{
     beforeEach(async()=>{
         await browser.maximizeWindow()
         await browser.url('https://demoqa.com/browser-windows')

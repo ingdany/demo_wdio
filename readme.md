@@ -11,3 +11,4 @@
 ### Generate Report
 
 `allure generate ./allure-results && allure open`
+

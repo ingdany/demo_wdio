@@ -1,4 +1,4 @@
-describe.skip("Login Test Scenarios", () => {
+describe("Login Test Scenarios", () => {
   it("should login with valid credentials", async () => {
     await browser.url("https://www.saucedemo.com");
 
